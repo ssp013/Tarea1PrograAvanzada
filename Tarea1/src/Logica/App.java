@@ -4,14 +4,21 @@
 package Logica;
 import Dominio.*;
 import java.io.*;
+import ucn.*;
 /**
  * @author ssp013
  *
  */
 public class App {
-
-
-
+	public void Menu(SistemaSonda Sistema) {
+		
+		try{
+			StdOut.println(sistema.obtenerDatosFuncionariosProyecto(codigo)); 
+			}catch(NullPointerException ex){
+			StdOut.println(ex.getMessage()); 
+			}		
+		
+	}
 	/**
 	 * @param args
 	 */
@@ -19,7 +26,6 @@ public class App {
 		// TODO Auto-generated method stub
 		SistemaSonda Sistema = new SistemaSondaImpl();
 		
-
 	}
 
 }

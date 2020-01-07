@@ -12,8 +12,8 @@ public class Novato extends Programador{
 	/**
 	 * 
 	 */
-	private String Lenguaje;
-	public Novato(String Rut, int SueldoFijo,String Lenguaje) {
+	private int Lenguaje;
+	public Novato(String Rut, int SueldoFijo,int Lenguaje) {
 		// TODO Auto-generated constructor stub
 		super (Rut,SueldoFijo);
 		this.Lenguaje = Lenguaje;
@@ -23,7 +23,7 @@ public class Novato extends Programador{
 	/**
 	 * @return the lenguaje
 	 */
-	public String getLenguaje() {
+	public int getLenguaje() {
 		return Lenguaje;
 	}
 
@@ -31,7 +31,7 @@ public class Novato extends Programador{
 	/**
 	 * @param lenguaje the lenguaje to set
 	 */
-	public void setLenguaje(String lenguaje) {
+	public void setLenguaje(int lenguaje) {
 		Lenguaje = lenguaje;
 	}
 

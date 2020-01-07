@@ -18,7 +18,7 @@ public class SistemaSondaImpl implements SistemaSonda {
 		this.listaProgramadores = new ListaProgramadores(100);
 	}
 	@Override
-	public boolean ingresarNovato(String Rut, int SueldoFijo, String Lenguaje) {
+	public boolean ingresarNovato(String Rut, int SueldoFijo, int Lenguaje) {
 		// TODO Auto-generated method stub
 		Programador novato = new Novato(Rut,SueldoFijo,Lenguaje);
 		boolean ingresarProg = listaProgramadores.ingresarProgramador(novato);
@@ -34,12 +34,49 @@ public class SistemaSondaImpl implements SistemaSonda {
 	@Override
 	public String obtenerDatosProgramadores() {
 		// TODO Auto-generated method stub
-		return null;
+		String texto = "";
+		for(int i=0;i<listaProgramadores.getCantProg();i++) {
+			Programador programador = listaProgramadores.getProgramadorI(i);
+			if(programador != null ) {
+				if(programador instanceof Novato) {
+					String rut = programador.getRut();
+					int sueldo = programador.calcularSueldo();
+					int cantidadLenguajes = ( (Novato) programador).getLenguaje();
+					String datos = "Programador Novato --> Rut : "+rut+", Sueldo: "+sueldo+", Cantidad Lenguajes: "+cantidadLenguajes;
+					texto+=datos;
+					texto+="\n";
+					
+				}else if(programador instanceof Experto) {
+					String rut = programador.getRut();
+					int sueldo = programador.calcularSueldo();
+					int añosExperiencia = ((Experto) programador).getAñosExperiencia();
+					String datos = "Programador Experto --> Rut : "+rut+", Sueldo: "+sueldo+", Años experiencia: "+añosExperiencia;
+					texto+=datos;
+					texto+="\n";
+				}
+			}
+			
+		}
+		return texto;
 	}
 	@Override
 	public String obtenerDatosNovatos() {
 		// TODO Auto-generated method stub
-		return null;
+		String texto = "";
+		int CantNovatos =0;
+		int sumaLenguajes=0;
+		for(int i=0;i<listaProgramadores.getCantProg();i++) {
+			Programador programador = listaProgramadores.getProgramadorI(i);
+			if(programador != null ) {
+				if(programador instanceof Novato) {
+					int cantidadLenguajes = ( (Novato) programador).getLenguaje();
+					sumaLenguajes+=cantidadLenguajes;
+					CantNovatos+=1;		
+				}
+			}
+		}
+		texto = "La Cantidad de programadores novatos es "+CantNovatos+" y el promedio de lenguajes es "+ sumaLenguajes;		
+		return texto;
 	}
 
 }
