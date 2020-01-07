@@ -11,7 +11,7 @@ import ucn.*;
  */
 public class App {
 	public void Menu(SistemaSonda Sistema) {
-		StdOut.println("HOLA");
+		//StdOut.println("HOLA");
 		
 		/**try{
 			StdOut.println(sistema.obtenerDatosFuncionariosProyecto(codigo)); 
