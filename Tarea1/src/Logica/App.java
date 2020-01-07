@@ -11,14 +11,15 @@ import ucn.*;
  */
 public class App {
 	public void Menu(SistemaSonda Sistema) {
+		StdOut.println("HOLA");
 		
-		try{
+		/**try{
 			StdOut.println(sistema.obtenerDatosFuncionariosProyecto(codigo)); 
 			}catch(NullPointerException ex){
 			StdOut.println(ex.getMessage()); 
 			}		
 		
-	}
+	}**/
 	/**
 	 * @param args
 	 */
