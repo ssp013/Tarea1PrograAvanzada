@@ -3,7 +3,7 @@
  */
 package Logica;
 import Dominio.*;
-
+import ucn.*;
 /**
  * @author ssp013
  *
@@ -34,7 +34,7 @@ public class SistemaSondaImpl implements SistemaSonda {
 	@Override
 	public String obtenerDatosProgramadores() {
 		// TODO Auto-generated method stub
-		String texto = "";
+		String texto = " ";
 		for(int i=0;i<listaProgramadores.getCantProg();i++) {
 			Programador programador = listaProgramadores.getProgramadorI(i);
 			if(programador != null ) {
@@ -42,7 +42,7 @@ public class SistemaSondaImpl implements SistemaSonda {
 					String rut = programador.getRut();
 					int sueldo = programador.calcularSueldo();
 					int cantidadLenguajes = ( (Novato) programador).getLenguaje();
-					String datos = "Programador Novato --> Rut : "+rut+", Sueldo: "+sueldo+", Cantidad Lenguajes: "+cantidadLenguajes;
+					String datos = "Programador Novato --> Rut : "+rut+", Sueldo: "+sueldo+", Cantidad Lenguajes: "+cantidadLenguajes+"\n";
 					texto+=datos;
 					texto+="\n";
 					
@@ -50,13 +50,14 @@ public class SistemaSondaImpl implements SistemaSonda {
 					String rut = programador.getRut();
 					int sueldo = programador.calcularSueldo();
 					int añosExperiencia = ((Experto) programador).getAñosExperiencia();
-					String datos = "Programador Experto --> Rut : "+rut+", Sueldo: "+sueldo+", Años experiencia: "+añosExperiencia;
+					String datos = "Programador Experto --> Rut : "+rut+", Sueldo: "+sueldo+", Años experiencia: "+añosExperiencia+"\n";
 					texto+=datos;
 					texto+="\n";
 				}
 			}
 			
 		}
+		StdOut.println(texto);
 		return texto;
 	}
 	@Override
