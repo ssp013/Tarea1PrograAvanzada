@@ -73,7 +73,8 @@ public class SistemaSondaImpl implements SistemaSonda {
 				}
 			}
 		}
-		texto = "La Cantidad de programadores novatos es "+CantNovatos+" y el promedio de lenguajes es "+ sumaLenguajes;		
+		double promedio = sumaLenguajes/CantNovatos;
+		texto = "La Cantidad de programadores novatos es "+CantNovatos+" y el promedio de lenguajes es "+ promedio;		
 		return texto;
 	}
 
