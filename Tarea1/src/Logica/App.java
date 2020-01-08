@@ -2,7 +2,6 @@
  * 
  */
 package Logica;
-import Dominio.*;
 import ucn.*;
 import java.io.IOException;
 import java.util.*;
