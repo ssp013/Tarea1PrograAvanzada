@@ -48,7 +48,7 @@ public class ListaProgramadores {
 		return cant;
 	}
 	public Programador getProgramadorI(int i) {
-		if(i>=cant && i<max) {
+		if(i>=0 && i<cant) {
 			return Lp[i];
 		}else {
 			return null;

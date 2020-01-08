@@ -35,25 +35,25 @@ public class SistemaSondaImpl implements SistemaSonda {
 	public String obtenerDatosProgramadores() {
 		// TODO Auto-generated method stub
 		String texto = "\nDatos de todos los programadores\n";
+		
 		for(int i=0;i<listaProgramadores.getCantProg();i++) {
 			Programador programador = listaProgramadores.getProgramadorI(i);
+			
 			if(programador != null ) {
+			
 				if(programador instanceof Novato) {
 					String rut = programador.getRut();
 					int sueldo = programador.calcularSueldo();
 					int cantidadLenguajes = ( (Novato) programador).getLenguaje();
-					String datos = "Programador Novato --> Rut : "+rut+", Sueldo: "+sueldo+", Cantidad Lenguajes: "+cantidadLenguajes+"\n";
-					texto=texto + datos;
+					texto= texto +" Programador Novato --> Rut : "+rut+", Sueldo: "+sueldo+", Cantidad Lenguajes: "+cantidadLenguajes+"\n";
 					
 				}else if(programador instanceof Experto) {
 					String rut = programador.getRut();
 					int sueldo = programador.calcularSueldo();
 					int añosExperiencia = ((Experto) programador).getAñosExperiencia();
-					String datos = "Programador Experto --> Rut : "+rut+", Sueldo: "+sueldo+", Años experiencia: "+añosExperiencia+"\n";
-					texto= texto + datos;
+					texto = texto + " Programador Experto --> Rut : "+rut+", Sueldo: "+sueldo+", Años experiencia: "+añosExperiencia+"\n";
 				}
 			}
-			
 		}
 		return texto;
 	}
