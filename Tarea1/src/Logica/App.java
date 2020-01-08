@@ -28,7 +28,7 @@ public class App {
 	  }
 	}
 	public static void desplegarDatosDeLosProgramadores(SistemaSonda Sistema) {
-		
+		StdOut.println(Sistema.obtenerDatosProgramadores());
 	}
 	public static void iniciarMenu(SistemaSonda Sistema) {
 		StdOut.println("Bienvenido al Sistema Sonda \nIngrese los datos de los programadores.");
@@ -72,6 +72,7 @@ public class App {
 		}
 		StdOut.println("Fin de ingreso de datos!");
 		//Desplegamos los datos de los programadores:
+		desplegarDatosDeLosProgramadores(Sistema);
 		
 	}
 	/**
