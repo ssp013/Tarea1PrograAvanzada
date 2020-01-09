@@ -41,11 +41,4 @@ public class Experto extends Programador{
 		int montoFinal = sueldo + this.getSueldoFijo();
 		return montoFinal;
 	}
-
-	@Override
-	public String toString() {
-		return "Programador Experto [ añosExperiencia = " + añosExperiencia + "]";
-	}
-	
-
 }

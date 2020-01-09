@@ -41,12 +41,4 @@ public class Novato extends Programador{
 		// TODO Auto-generated method stub
 		return this.getSueldoFijo();
 	}
-
-
-	@Override
-	public String toString() {
-		return "Programador Novato [ Cantidad de Lenguaje = " + Lenguaje + "]";
-	}
-	
-
 }
