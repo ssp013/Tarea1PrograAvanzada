@@ -74,8 +74,13 @@ public class App {
 		}
 		StdOut.println("Fin de ingreso de datos!");
 		//Desplegamos los datos de los programadores:
+		StdOut.println("****** Datos todos los Programadores ***********");
 		desplegarDatosDeLosProgramadores(Sistema);
+		StdOut.println("****** Datos Programadores Novatos ***********");
 		desplegarDatosNovatos(Sistema);
+		
+		
+		
 	}
 	/**
 	 * @param args
